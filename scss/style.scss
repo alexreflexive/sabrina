@@ -1,0 +1,160 @@
+@import "variables"; 
+/* general */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    // background: linear-gradient(250deg, #333, #ddd);
+}
+
+p{}
+
+a{
+    color:var(--link);
+    text-decoration: none;
+    &:hover{
+        color:var(--linkhover);
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width:100%;
+}
+
+/* Landing */
+.landing{
+    background: url(../images/landing.jpg) center center/cover;
+    height: 100vh;
+    header{ 
+        width:100%;
+        position: fixed;;
+        // position:sticky;
+        top:0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content:space-between ;
+        padding: 20px;
+        background: var(--header-bg);
+        opacity:0.75;
+        .logo{
+            font-family: 'Princess Sofia', cursive;
+            font-size: 5rem;
+        }
+        .nav{
+            width:600px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: flex-end;
+            li{
+                font-size: 1.5rem;
+                width:200px;
+                text-align: center;
+                &:hover{
+                    border:1px solid black;
+                    border-radius: 5px;
+                    background: black;
+                    // color: white;
+                }
+            }
+        }
+    }
+}
+
+
+/* La Bande à Sabrina */
+
+#bande-sabrina{
+    height: 100vh;
+    .bs-content{
+        height:100%;
+        display:flex;
+        flex-flow: row nowrap;
+        .right,.left{
+            width:50%;
+        }
+        .right{
+            background: blue;
+            background: url(../images/right.jpg) center center/cover;
+        }
+        .left{
+            background:var(--light-bg);
+            display:flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            .left-content{
+                border:1px solid var(--light-bg);
+                width:400px;
+                h2{
+                    font-size: 3rem;
+
+                }
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
+
+    }
+}
+
+
+/* Réalisations */
+
+#realisations{
+    height: 100vh;
+    padding:25% 30px 0 30px;
+    h1{
+        width:40%;
+        margin: auto;
+    }
+    .real-content{
+        width:40%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin:auto;
+        // display:grid;
+        // grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-rows: 1fr 1fr 1fr;
+        .img-container{
+            width:200px;
+        }
+    }
+}
+
+/* Footer */
+
+footer{
+    background: #333;
+    padding:25% 0;
+    height: 100vh;
+    .contact-form{
+        // background: #777;
+        padding:25px;
+        height: 33%;
+        width:40%;
+        margin:auto;
+        form{
+            input, textarea{
+                width:100%;
+            }
+            input{
+                height: 25px;
+            }
+            textarea{
+                height:100px;
+            }
+        }
+    }
+}
+

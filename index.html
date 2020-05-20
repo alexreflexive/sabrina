@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabrina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section id="landing" class="landing">
+        <header class="header">
+            <h1 class="logo"><a href="#">Sabrina</a></h1>
+            <ul class="nav">
+                <li>
+                    <a href="#landing" class="js-scrollTo">
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="#bande-sabrina" class="js-scrollTo">
+                        Sabrina
+                    </a>
+                </li>
+                <li>
+                    <a href="#realisations" class="js-scrollTo">
+                        Réalisations
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="js-scrollTo">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </section>
+
+    <section id="bande-sabrina">
+        <div class="bs-content">
+            <div class="left">
+                <div class="left-content">
+                <h1>La Bande à Sabrina</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur officia inventore, totam nam nobis nostrum. A, voluptates rerum tempora error repudiandae eum maiores sit exercitationem in tenetur voluptate amet doloremque dolor dolorum eveniet et quasi ratione aspernatur. Eum, odio est, praesentium saepe aut minus reiciendis, quas ab incidunt iure assumenda.</p>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </section>
+
+    <section id="realisations">
+        <h1>Réalisations</h1>
+        <div class="real-content">
+            <div class="img-container"><img src="images/real-01.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-02.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-03.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-04.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-05.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-06.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-07.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-08.jpg" alt=""></div>
+            <div class="img-container"><img src="images/real-09.jpg" alt=""></div>
+        </div>
+        
+    </section>
+
+    <footer id="contact">
+        <div class="contact-form">
+
+        <form action="#">
+            <div>
+                <input type="email" placeholder="email">
+            </div>
+            <div>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+
+    </footer>
+
+
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+            var page = $(this).attr('href'); // Page cible
+            var speed = 750; // Durée de l'animation (en ms)
+            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+            return false;
+        });
+    });
+    </script>
+</body>
+</html>

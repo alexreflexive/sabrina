@@ -1,0 +1,121 @@
+@charset "UTF-8";
+:root {
+  --text:#333;
+  --link:var(--text);
+  --linkhover:#777;
+  --header-bg:#ddd;
+  --dark-bg:#333;
+  --light-bg:#aaa
+; }
+
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh; }
+
+a {
+  color: var(--link);
+  text-decoration: none; }
+  a:hover {
+    color: var(--linkhover); }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+/* Landing */
+.landing {
+  background: url(../images/landing.jpg) center center/cover;
+  height: 100vh; }
+  .landing header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--header-bg);
+    opacity: 0.75; }
+    .landing header .logo {
+      font-family: 'Princess Sofia', cursive;
+      font-size: 5rem; }
+    .landing header .nav {
+      width: 600px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: flex-end; }
+      .landing header .nav li {
+        font-size: 1.5rem;
+        width: 200px;
+        text-align: center; }
+        .landing header .nav li:hover {
+          border: 1px solid black;
+          border-radius: 5px;
+          background: black; }
+
+/* La Bande à Sabrina */
+#bande-sabrina {
+  height: 100vh; }
+  #bande-sabrina .bs-content {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap; }
+    #bande-sabrina .bs-content .right, #bande-sabrina .bs-content .left {
+      width: 50%; }
+    #bande-sabrina .bs-content .right {
+      background: blue;
+      background: url(../images/right.jpg) center center/cover; }
+    #bande-sabrina .bs-content .left {
+      background: var(--light-bg);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center; }
+      #bande-sabrina .bs-content .left .left-content {
+        border: 1px solid var(--light-bg);
+        width: 400px; }
+        #bande-sabrina .bs-content .left .left-content h2 {
+          font-size: 3rem; }
+        #bande-sabrina .bs-content .left .left-content p {
+          font-size: 2rem; }
+
+/* Réalisations */
+#realisations {
+  height: 100vh;
+  padding: 25% 30px 0 30px; }
+  #realisations h1 {
+    width: 40%;
+    margin: auto; }
+  #realisations .real-content {
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: auto; }
+    #realisations .real-content .img-container {
+      width: 200px; }
+
+/* Footer */
+footer {
+  background: #333;
+  padding: 25% 0;
+  height: 100vh; }
+  footer .contact-form {
+    padding: 25px;
+    height: 33%;
+    width: 40%;
+    margin: auto; }
+    footer .contact-form form input, footer .contact-form form textarea {
+      width: 100%; }
+    footer .contact-form form input {
+      height: 25px; }
+    footer .contact-form form textarea {
+      height: 100px; }
